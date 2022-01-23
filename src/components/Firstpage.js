@@ -14,7 +14,7 @@ export default function FirstPage(){
         <h3>Student Management System</h3>
         <hr />
       
-          <p className ="description-landing-page">Cautious !!! This web application only for learning purpose do n't use real passwords or data.</p>
+          <p className ="description-landing-page">Cautious !!! This web application only for learning purpose do not use real passwords or data.</p>
       
         
       <br/>
