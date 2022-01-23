@@ -27,6 +27,7 @@ import AutharizeHeader from './components/Header/AutharizeHeader';
 import Mystudents from './components/Mystudents';
 import Studentprofile from './components/Studentprofie';
 import Updatestudentprofile from './components/UpdateStdProfile';
+import FirstPage from './components/Firstpage';
 
 
 
@@ -39,6 +40,7 @@ function App() {
   return (
     <Router>
       <div>
+        <Route path="/" exact component={FirstPage}/>
         <Route path="/public" component={Header}/>
         <Route path="/user" component={AutharizeHeader}/>
         <Route path="/user" exact component={Home}/>
