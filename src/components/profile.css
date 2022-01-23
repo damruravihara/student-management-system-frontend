@@ -1,0 +1,349 @@
+.profile{
+  width: 300px;
+  margin-top: 30px;
+  margin-left: 50px;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profileleft{
+  width: 500px;
+  margin-left: 600px;
+  margin-top: -520px;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fullprofile{
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+  background-color: #EEEEEE;
+  height: 550px;
+  width: 1300px;
+  margin-left: 23px;
+}
+
+.vl{
+  border-left: 2px solid black;
+  height: 500px;
+  margin-left: 450px;
+  margin-top: -285px;
+}
+
+.column-hrline{
+  /* margin-bottom: -1990px; */
+  width: 0px;
+  padding: 5px;
+}
+
+.editbutton{
+  margin-left: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .profileleft{
+    width: 367px;
+    margin-top: 25px;
+    margin-left: 16px;
+    /* margin-top: -520px; */
+    background-color: yellow;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .vl{
+    border-left: 0px solid black;
+    height: 500px;
+    margin-left: 450px;
+    margin-top: -285px;
+  }
+  
+  .column-hrline{
+    
+    /* margin-bottom: -1990px; */
+    width: 0px;
+    padding: 0px;
+  }
+  
+  .editbutton{
+    margin-left: 270px;
+  }
+
+  .fullprofile{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: #EEEEEE;
+    height: 860px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+
+  .profile{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 114px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .profileleft{
+    width: 500px;
+    margin-left: 16px;
+    margin-top: 25px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .fullprofile{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: #EEEEEE;
+    height: 850px;
+    width: 535px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .vl{
+    border-left: 0px solid black;
+    height: 500px;
+    margin-left: 450px;
+    margin-top: -285px;
+  }
+  
+  .column-hrline{
+    /* margin-bottom: -1990px; */
+    width: 0px;
+    padding: 0px;
+  }
+  
+  .editbutton{
+    margin-left: 400px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .profile{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 200px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .profileleft{
+    width: 500px;
+    margin-left: 105px;
+    margin-top: 25px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .fullprofile{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: #EEEEEE;
+    height: 850px;
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .vl{
+    border-left: 0px solid black;
+    height: 500px;
+    margin-left: 450px;
+    margin-top: -285px;
+  }
+  
+  .column-hrline{
+    /* margin-bottom: -1990px; */
+    width: 0px;
+    padding: 0px;
+  }
+  
+  .editbutton{
+    margin-left: 400px;
+  }
+} 
+
+
+@media only screen and (min-width: 992px) {
+  .profile{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 20px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .profileleft{
+    width: 500px;
+    margin-left: 430px;
+    margin-top: -520px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .fullprofile{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: #EEEEEE;
+    height: auto;
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .vl{
+    border-left: 2px solid black;
+    height: 500px;
+    margin-left: 380px;
+    margin-top: -285px;
+  }
+  
+  .column-hrline{
+    /* margin-bottom: -1990px; */
+    width: 0px;
+    padding: 5px;
+  }
+  
+  .editbutton{
+    margin-left: 400px;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .profile{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .profileleft{
+    width: 500px;
+    margin-left: 560px;
+    margin-top: -520px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .fullprofile{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: #EEEEEE;
+    height: auto;
+    width: 1160px;
+    margin-left: 23px;
+  }
+  
+  .vl{
+    border-left: 2px solid black;
+    height: 500px;
+    margin-left: 460px;
+    margin-top: -285px;
+  }
+  
+  .column-hrline{
+    /* margin-bottom: -1990px; */
+    width: 0px;
+    padding: 5px;
+  }
+  
+  .editbutton{
+    margin-left: 400px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .profile{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .profileleft{
+    width: 500px;
+    margin-left: 560px;
+    margin-top: -520px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .fullprofile{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: #EEEEEE;
+    height: auto;
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .vl{
+    border-left: 2px solid black;
+    height: 500px;
+    margin-left: 460px;
+    margin-top: -285px;
+  }
+  
+  .column-hrline{
+    /* margin-bottom: -1990px; */
+    width: 0px;
+    padding: 5px;
+  }
+  
+  .editbutton{
+    margin-left: 400px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .profile{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .profileleft{
+    width: 500px;
+    margin-left: 560px;
+    margin-top: -520px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .fullprofile{
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    background-color: #EEEEEE;
+    height: auto;
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: inherit;
+  }
+
+  
+  .vl{
+    border-left: 2px solid black;
+    height: 500px;
+    margin-left: 460px;
+    margin-top: -285px;
+  }
+   
+  .column-hrline{
+    /* margin-bottom: -1990px; */
+    width: 0px;
+    padding: 5px;
+  }
+  
+  .editbutton{
+    margin-left: 400px;
+  }
+}
