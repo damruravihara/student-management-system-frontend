@@ -29,7 +29,7 @@ export default function Updateprofile(){
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
+      const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data)
       setName(res.data.name)
       setGender(res.data.gender)
@@ -64,7 +64,7 @@ if(e!=null){
       grade,
       email}
 
-  axios.put(`/user/userupdate/${id}`,userupdate).then(()=>{
+  axios.put(`https://star-school.herokuapp.com/user/userupdate/${id}`,userupdate).then(()=>{
 
 
     swal({          

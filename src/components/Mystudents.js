@@ -20,7 +20,7 @@ export default function Mystudents(){
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
+      const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data);
       })
   }
@@ -29,7 +29,7 @@ export default function Mystudents(){
 
   useEffect(()=>{
     const getStudent = async()=>{
-     const res = await axios.get(`/student/mystudents/${id}`).then((res)=>{
+     const res = await axios.get(`https://star-school.herokuapp.com/student/mystudents/${id}`).then((res)=>{
       setStudent(res.data);
       }).catch(()=>{
         history.push(path);
@@ -50,7 +50,7 @@ export default function Mystudents(){
         dangerMode: true,
       }).then((willDelete) => {
         if (willDelete) {
-    axios.delete(`/student/deletestudent/${id}`).then(()=>{
+    axios.delete(`https://star-school.herokuapp.com/student/deletestudent/${id}`).then(()=>{
      
         if (willDelete) {
           swal("The Student has been deleted!", 

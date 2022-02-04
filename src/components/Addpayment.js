@@ -25,7 +25,7 @@ export default function Addpayment(){
 
 
   useEffect(()=>{
-    axios.get(`/student/getstudent/${id}`).then((res)=>{
+    axios.get(`https://star-school.herokuapp.com/student/getstudent/${id}`).then((res)=>{
     setStudent(res.data.student)
     setStname(res.data.student.stname)
     setUserId(res.data.student.userId)
@@ -56,7 +56,7 @@ function sendData(e){
     note
   }
 
-  axios.post('/student/addpayment',newPayment).then(()=>{
+  axios.post('https://star-school.herokuapp.com/student/addpayment',newPayment).then(()=>{
     swal({
     title: "Success!",
     text: "New Payment Added Successfully",

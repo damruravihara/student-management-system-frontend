@@ -20,7 +20,7 @@ export default function Viewpayment(){
   const [student, setStudent] = useState([]);
 
   useEffect(()=>{
-    axios.get(`/student/getstudent/${id}`).then((res)=>{
+    axios.get(`https://star-school.herokuapp.com/student/getstudent/${id}`).then((res)=>{
     setStudent(res.data.student)
     }).catch((e)=>{
       alert("getstudent " +e); 
@@ -29,7 +29,7 @@ export default function Viewpayment(){
 
   useEffect(()=>{
     const getPayment = async()=>{
-     const res = await axios.get(`/student/allpayment/${id}`).then((res)=>{
+     const res = await axios.get(`https://star-school.herokuapp.com/student/allpayment/${id}`).then((res)=>{
       setPayment(res.data);
       }).catch(()=>{
         history.push(path);
@@ -54,7 +54,7 @@ export default function Viewpayment(){
         dangerMode: true,
       }).then((willDelete) => {
         if (willDelete) {
-    axios.delete(`/student/deletepayment/${id}`).then(()=>{
+    axios.delete(`https://star-school.herokuapp.com/student/deletepayment/${id}`).then(()=>{
      
         if (willDelete) {
           swal("The Payment has been deleted!", 
@@ -78,7 +78,7 @@ const deleteAll=(id) =>{
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-  axios.delete(`/student/deleteallpayment/${id}`).then(()=>{
+  axios.delete(`https://star-school.herokuapp.com/student/deleteallpayment/${id}`).then(()=>{
    
       if (willDelete) {
         swal("The Payment has been deleted!", 

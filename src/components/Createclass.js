@@ -20,7 +20,7 @@ export default function Createclass(){
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
+      const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data)
       setUserId(res.data._id)
       setUserName(res.data.name)
@@ -47,7 +47,7 @@ export default function Createclass(){
 
     }
 
-    axios.post('/student/createclass',newClass).then(()=>{
+    axios.post('https://star-school.herokuapp.com/student/createclass',newClass).then(()=>{
       swal({
       title: "Success!",
       text: "Class Successfully Created",

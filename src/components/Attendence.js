@@ -18,7 +18,7 @@ export default function Attendence(){
 
   useEffect(()=>{
     const getAttendence = async()=>{
-     const res = await axios.get(`/student/getattendence/${id}`).then((res)=>{
+     const res = await axios.get(`https://star-school.herokuapp.com/student/getattendence/${id}`).then((res)=>{
       setAttendence(res.data);
       })
     }
@@ -26,7 +26,7 @@ export default function Attendence(){
   }, []);
 
   function viewstudent(){
-    axios.get(`/student/attendance/${id}`).then((res) => {
+    axios.get(`https://star-school.herokuapp.com/student/attendance/${id}`).then((res) => {
       // setAttendence(res.data);
           console.log(res.data)
           setTimeout(function(){

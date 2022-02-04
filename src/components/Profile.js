@@ -22,7 +22,7 @@ const Profile = props=>{
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
+      const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data);
       }).catch(()=>{
         history.push(path);
@@ -43,12 +43,12 @@ const Profile = props=>{
         dangerMode: true,
       }).then((willDelete) => {
         if (willDelete) {
-    axios.delete(`/user/delete/${id}`).then(()=>{
-      axios.delete(`/student/deleteuserstudent/${id}`).then(()=>{
-        axios.delete(`/student/deleteallpayment/${id}`).then(()=>{
-          axios.delete(`/student/deleteuserabsent/${id}`).then(()=>{
-            axios.delete(`/student/deleteuserpresent/${id}`).then(()=>{
-              axios.delete(`/student/deleteuserclass/${id}`).then(()=>{
+    axios.delete(`https://star-school.herokuapp.com/user/delete/${id}`).then(()=>{
+      axios.delete(`https://star-school.herokuapp.com/student/deleteuserstudent/${id}`).then(()=>{
+        axios.delete(`https://star-school.herokuapp.com/student/deleteallpayment/${id}`).then(()=>{
+          axios.delete(`https://star-school.herokuapp.com/student/deleteuserabsent/${id}`).then(()=>{
+            axios.delete(`https://star-school.herokuapp.com/student/deleteuserpresent/${id}`).then(()=>{
+              axios.delete(`https://star-school.herokuapp.com/student/deleteuserclass/${id}`).then(()=>{
           
         if (willDelete) {
           swal("The User has been deleted!", 

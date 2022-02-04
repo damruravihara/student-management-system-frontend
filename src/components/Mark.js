@@ -36,7 +36,7 @@ export default function Mark(){
   // },[]);
 
   useEffect(()=>{
-    axios.get(`/student/oneattendence/${id}`).then((res)=>{
+    axios.get(`https://star-school.herokuapp.com/student/oneattendence/${id}`).then((res)=>{
     setAttendence(res.data.attendence)
     setUserId(res.data.attendence.userId)
     setUsername(res.data.attendence.userName)
@@ -63,7 +63,7 @@ function presenrData(e){
     stname,
     currentDate
   }
-  axios.post('/student/addpresent',newpresent).then((willAccept)=>{
+  axios.post('https://star-school.herokuapp.com/student/addpresent',newpresent).then((willAccept)=>{
     if(willAccept){
       swal({
         title: "Success",
@@ -76,7 +76,7 @@ function presenrData(e){
        })
       }
   });
-  axios.delete(`/student/deleteattendence/${id}`,newpresent)
+  axios.delete(`https://star-school.herokuapp.com/student/deleteattendence/${id}`,newpresent)
 }
 
 function absentData(e){
@@ -91,7 +91,7 @@ function absentData(e){
     stname,
     currentDate
   }
-  axios.post('/student/addabsent',newabsent).then((willAccept)=>{
+  axios.post('https://star-school.herokuapp.com/student/addabsent',newabsent).then((willAccept)=>{
     if(willAccept){
       swal({
         title: "Success",
@@ -104,7 +104,7 @@ function absentData(e){
        })
       }
   });
-  axios.delete(`/student/deleteattendence/${id}`,newabsent)
+  axios.delete(`https://star-school.herokuapp.com/student/deleteattendence/${id}`,newabsent)
 }
 
   return(

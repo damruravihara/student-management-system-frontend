@@ -18,7 +18,7 @@ const Studentprofile = props=>{
   const {id} = useParams();
 
   useEffect(()=>{
-    axios.get(`/student/getstudent/${id}`).then((res)=>{
+    axios.get(`https://star-school.herokuapp.com/student/getstudent/${id}`).then((res)=>{
     setStudent(res.data.student)
     }).catch(()=>{
       history.push(path);

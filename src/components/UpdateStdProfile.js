@@ -24,7 +24,7 @@ export default function Updatestudentprofile(){
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
+      const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data)
       }).catch(()=>{
         history.push(path);
@@ -37,7 +37,7 @@ export default function Updatestudentprofile(){
   },[]);
 
   useEffect(()=>{
-    axios.get(`/student/getstudent/${id}`).then((res)=>{
+    axios.get(`https://star-school.herokuapp.com/student/getstudent/${id}`).then((res)=>{
     setStudent(res.data.student)
     setStname(res.data.student.stname)
     setAddress(res.data.student.address)
@@ -61,7 +61,7 @@ export default function Updatestudentprofile(){
       gender,
       school}
 
-  axios.put(`/student/studentupdate/${id}`,classupdate).then(()=>{
+  axios.put(`https://star-school.herokuapp.com/student/studentupdate/${id}`,classupdate).then(()=>{
 
     swal({          
   title: "Success!",

@@ -16,7 +16,7 @@ export default function Attendencehistory(){
 
   function presentLabours(){
 
-    axios.get(`/student/allpresent/${id}/${currentDate}`).then((res)=>{
+    axios.get(`https://star-school.herokuapp.com/student/allpresent/${id}/${currentDate}`).then((res)=>{
       setAttendence(res.data);
 }).catch((err)=>{
     alert(err.message);
@@ -25,7 +25,7 @@ export default function Attendencehistory(){
 
 function absentLabours(){
 
-  axios.get(`/student/allabsent/${id}/${currentDate}`).then((res)=>{
+  axios.get(`https://star-school.herokuapp.com/student/allabsent/${id}/${currentDate}`).then((res)=>{
     setAttendence(res.data);
 }).catch((err)=>{
   alert(err.message);

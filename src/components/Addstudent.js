@@ -29,7 +29,7 @@ export default function Addstudent(){
 
     useEffect(()=>{
       const fetchUser = async ()=>{
-        const res = await axios.get('/user/userprofile').then((res)=>{
+        const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
         setUser(res.data)
         setUserId(res.data._id)
         setUserName(res.data.name)
@@ -44,7 +44,7 @@ export default function Addstudent(){
     },[]);
 
     useEffect(()=>{
-      axios.get(`/student/getclass/${id}`).then((res)=>{
+      axios.get(`https://star-school.herokuapp.com/student/getclass/${id}`).then((res)=>{
       setClassroom(res.data.classroom)
       setClassName(res.data.classroom.classname)
       setClassId(res.data.classroom._id)
@@ -72,7 +72,7 @@ export default function Addstudent(){
         school
       }
   
-      axios.post('/student/addstudent',newStudent).then(()=>{
+      axios.post('https://star-school.herokuapp.com/student/addstudent',newStudent).then(()=>{
         swal({
         title: "Success!",
         text: "Your Successfully registered",

@@ -23,12 +23,12 @@ export default function Allusers(){
         dangerMode: true,
       }).then((willDelete) => {
         if (willDelete) {
-    axios.delete(`/user/delete/${id}`).then(()=>{
-      axios.delete(`/student/deleteuserstudent/${id}`).then(()=>{
-        axios.delete(`/student/deleteallpayment/${id}`).then(()=>{
-          axios.delete(`/student/deleteuserabsent/${id}`).then(()=>{
-            axios.delete(`/student/deleteuserpresent/${id}`).then(()=>{
-              axios.delete(`/student/deleteuserclass/${id}`).then(()=>{
+    axios.delete(`https://star-school.herokuapp.com/user/delete/${id}`).then(()=>{
+      axios.delete(`https://star-school.herokuapp.com/student/deleteuserstudent/${id}`).then(()=>{
+        axios.delete(`https://star-school.herokuapp.com/student/deleteallpayment/${id}`).then(()=>{
+          axios.delete(`https://star-school.herokuapp.com/student/deleteuserabsent/${id}`).then(()=>{
+            axios.delete(`https://star-school.herokuapp.com/student/deleteuserpresent/${id}`).then(()=>{
+              axios.delete(`https://star-school.herokuapp.com/student/deleteuserclass/${id}`).then(()=>{
           
         if (willDelete) {
           swal("The User has been deleted!", 
@@ -54,7 +54,7 @@ function myRefresh(){
 
 useEffect(()=>{
   const getUser = async()=>{
-   const res = await axios.get('/user/alluser').then((res)=>{
+   const res = await axios.get('https://star-school.herokuapp.com/user/alluser').then((res)=>{
       setUser(res.data);
     }).catch(()=>{
       history.push(path);

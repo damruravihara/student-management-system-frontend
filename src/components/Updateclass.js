@@ -22,7 +22,7 @@ export default function Updateclass(){
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
+      const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data)
       setUserId(res.data._id)
       setUserName(res.data.name)
@@ -37,7 +37,7 @@ export default function Updateclass(){
   },[]);
 
   useEffect(()=>{
-      axios.get(`/student/getclass/${id}`).then((res)=>{
+      axios.get(`https://star-school.herokuapp.com/student/getclass/${id}`).then((res)=>{
       setClassroom(res.data.classroom)
       setClassName(res.data.classroom.classname)
       setGrade(res.data.classroom.grade)
@@ -57,7 +57,7 @@ export default function Updateclass(){
       classname,
       grade}
 
-  axios.put(`/student/stdclsupdate/${id}`,classupdate).then(()=>{
+  axios.put(`https://star-school.herokuapp.com/student/stdclsupdate/${id}`,classupdate).then(()=>{
 
     swal({          
   title: "Success!",

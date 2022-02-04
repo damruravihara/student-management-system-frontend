@@ -21,7 +21,7 @@ export default function Allstudentclass(){
 
   useEffect(()=>{
     const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
+      const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data);
       }).catch(()=>{
         history.push(path);
@@ -35,7 +35,7 @@ export default function Allstudentclass(){
 
   useEffect(()=>{
     const getStudent = async()=>{
-     const res = await axios.get(`/student/allstudents/${id}`).then((res)=>{
+     const res = await axios.get(`https://star-school.herokuapp.com/student/allstudents/${id}`).then((res)=>{
       setStudent(res.data);
       }).catch((e)=>{
         alert(e); 
@@ -53,7 +53,7 @@ export default function Allstudentclass(){
         dangerMode: true,
       }).then((willDelete) => {
         if (willDelete) {
-    axios.delete(`/student/deletestudent/${id}`).then(()=>{
+    axios.delete(`https://star-school.herokuapp.com/student/deletestudent/${id}`).then(()=>{
      
         if (willDelete) {
           swal("The Student has been deleted!", 

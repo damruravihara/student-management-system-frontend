@@ -56,7 +56,7 @@ export default function Register(){
       // role="user"
     }
 
-    axios.post("http://localhost:8070/user/Tregister",newUser).then(()=>{
+    axios.post("https://star-school.herokuapp.com/user/Tregister",newUser).then(()=>{
      // refresh()
       swal({
       title: "Success!",

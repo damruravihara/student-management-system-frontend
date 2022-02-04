@@ -20,7 +20,7 @@ export default function Paymentstudent(){
 
   useEffect(()=>{
     const getStudent = async()=>{
-     const res = await axios.get(`/student/allstudents/${id}`).then((res)=>{
+     const res = await axios.get(`https://star-school.herokuapp.com/student/allstudents/${id}`).then((res)=>{
       setStudent(res.data);
       }).catch((e)=>{
         alert(e); 
