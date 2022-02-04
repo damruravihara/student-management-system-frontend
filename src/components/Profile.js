@@ -24,10 +24,11 @@ const Profile = props=>{
     const fetchUser = async ()=>{
       const res = await axios.get('https://star-school.herokuapp.com/user/userprofile').then((res)=>{
       setUser(res.data);
-      }).catch(()=>{
+      }).catch((e)=>{
+        alert(e);
         history.push(path);
         swal({title: "unauthorized",
-        text: "Please Login First",
+        text: "Please Login First" ,
         icon: "warning"} ); 
     })
   }
