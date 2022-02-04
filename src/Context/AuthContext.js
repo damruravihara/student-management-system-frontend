@@ -18,14 +18,9 @@ export default ({ children })=>{
   },[]);
   return(
     <div>
-      {!isLoaded ? <div class="d-flex justify-content-center">
-  <div class="spinner-border" role="status">
-   
-  </div>
-</div>:
       <AuthContext.Provider value={{user,setUser,isAuthenticated,setIsAuthenticated}}>
         { children}
-        </AuthContext.Provider>}
+        </AuthContext.Provider>
     </div>
   )
 }
