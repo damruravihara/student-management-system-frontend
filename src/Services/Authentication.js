@@ -27,5 +27,14 @@ export default{
 
     else
       return { isAuthenticated: false, user: { username: "", role: "" } };
+  },
+
+  viewprofile : async ()=>{
+    const res = await fetch('https://star-school.herokuapp.com/user/userprofile');
+    if (res.status !== 401)
+      return res.json().then(data => data);
+
+    else
+      return { isAuthenticated: false, user: { username: "", role: "" } };
   }
 }

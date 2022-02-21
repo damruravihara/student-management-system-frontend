@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useContext} from "react";
 import axios from "axios";
 import swal from "sweetalert";
 import { useHistory } from "react-router-dom";
@@ -10,6 +10,9 @@ import './profile.css'
 import EditIcon from '@material-ui/icons/Edit';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+
+import Authentication from "../Services/Authentication";
+import { AuthContext } from "../Context/AuthContext";
  
 
 
@@ -19,21 +22,30 @@ const Profile = props=>{
   let path = '/public/login';
 
   const [user, setUser] = useState([]);
+  const {isAuthenticated,setIsAuthenticated} = useContext(AuthContext);
+  // const [message,setMessage] = useState(null);
+  const authContext = useContext(AuthContext);
+
+  // useEffect(()=>{
+  //   const fetchUser = async ()=>{
+  //     const res = await axios.get('/user/userprofile').then((res)=>{
+  //     setUser(res.data);
+  //     }).catch((e)=>{
+  //       alert(e);
+  //       history.push(path);
+  //       swal({title: "unauthorized",
+  //       text: "Please Login First" ,
+  //       icon: "warning"} ); 
+  //   })
+  // }
+  //   fetchUser();
+  // },[]);
 
   useEffect(()=>{
-    const fetchUser = async ()=>{
-      const res = await axios.get('/user/userprofile').then((res)=>{
-      setUser(res.data);
-      }).catch((e)=>{
-        alert(e);
-        history.push(path);
-        swal({title: "unauthorized",
-        text: "Please Login First" ,
-        icon: "warning"} ); 
-    })
-  }
-    fetchUser();
-  },[]);
+    Authentication.viewprofile(user).then(data=>{
+      setUser(data);
+    });
+  })
 
   const deleteUser=(id) =>{
     swal({
